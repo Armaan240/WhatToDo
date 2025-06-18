@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatToDo</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Add JSConfetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="statsContainer">
+            <div class="details">
+                <h1>WhatToDo</h1>
+                
+                <!-- Emoji Mood Meter -->
+                <div class="mood-meter">
+                    <div class="emoji">😴</div>
+                    <div class="progress-text">Let's get started!</div>
+                </div>
+                
+                <!-- Progress Steps -->
+                <div class="step-progress">
+                    <div class="step" data-step="1">📝 Plan</div>
+                    <div class="step" data-step="2">✏️ Work</div>
+                    <div class="step" data-step="3">🎯 Focus</div>
+                    <div class="step" data-step="4">🏆 Win</div>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div id="progressBar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            
+            <div class="statsNumbers">
+                <p id="numbers">0/0</p>
+            </div>
+        </div>
+        
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Write Your Task" aria-label="Task input">
+            <button id="newTask" type="submit">+</button>
+        </form>
+        
+        <ul id="task-list" class="taskList"></ul>
+    </div>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
